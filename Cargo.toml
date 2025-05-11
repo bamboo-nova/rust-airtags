@@ -1,0 +1,14 @@
+[package]
+name = "rust-airtags"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.98"
+dotenvy = "0.15.7"
+serde = { version = "1.0.219", features = ["derive"] }
+tokio = { version = "1.45.0", features = ["macros", "rt-multi-thread"] }
+omnisette = { path = "../apple-private-apis/omnisette" }
+icloud_auth = { path = "../apple-private-apis/icloud-auth" }
+reqwest = { version = "0.11", features = ["cookies", "json"] }
+serde_json = "1.0.140"
