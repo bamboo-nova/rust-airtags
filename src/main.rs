@@ -6,6 +6,7 @@ use std::env;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
+    // 0. 環境変数の読み込み
     dotenv().ok();
     let apple_id = env::var("APPLE_ID")
         .context("環境変数 APPLE_ID が設定されていません")?;
